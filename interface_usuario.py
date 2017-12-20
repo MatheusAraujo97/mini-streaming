@@ -5,7 +5,7 @@ run_menu_principal = True
 
 while run_menu_principal:
     print("(1) Menu Usuário")
-    print("(2) menu Filme")
+    print("(2) Menu Filme")
     print("(0) Sair")
 
     op = input("Digite sua escolha:")
