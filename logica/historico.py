@@ -1,4 +1,4 @@
-import filme
+from logica import filme
 
 filmes_assistidos = []
 

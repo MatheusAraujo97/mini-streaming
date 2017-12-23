@@ -1,6 +1,6 @@
-import filme
-import historico
-import curtidos
+from logica import filme
+from logica import historico
+from logica import curtidos
 
 cont = 0
 def gerar_codigo():
@@ -14,12 +14,16 @@ def imprimir_filme(f):
     print("Genêro:", f[2])
     print("Ano:", f[3])
     print("")
-    
+
 def menu_adicionar():
     cod = gerar_codigo()
     titulo_filme = input("Título  do filme: ")
     genero_filme = input("Genêro: ")
     ano_filme = input("Ano: ")
+    for f in filme.listar_filmes():
+        if titulo_filme == f[1]:
+            print("Esse filme já foi adicionado!")
+            return None
     filme.adicionar_filmes(cod, titulo_filme, genero_filme, ano_filme)
 
 def menu_listar():
